@@ -75,6 +75,23 @@ VS Code offers two commands for comment toggling. **Toggle Line Comment** and **
 }
 ```
 
+The `lineComment` property supports two formats for backwards compatibility:
+
+- A string value for simple line comment definitions.
+- An object value that enables configuring the indentation behavior of comment lines.
+
+```json
+{
+  "comments": {
+    "lineComment": {
+      "comment": "//",
+      "noIndent": true
+    },
+    "blockComment": ["/*", "*/"]
+  }
+}
+```
+
 ## Brackets definition
 
 When you move the cursor to a bracket defined here, VS Code will highlight that bracket together with its matching pair.
